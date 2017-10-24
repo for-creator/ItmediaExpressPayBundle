@@ -13,7 +13,6 @@ composer.json:
 ```json
 {
     "require": {
-        // ...
         "itmedia/express-pay-bundle": "^1.0"
     }
 }
@@ -27,7 +26,6 @@ public function registerBundles()
 		// ...
 		new Itmedia\ExpressPayBundle\ItmediaExpressPayBundle(),
 	];
-	// ...
 }
 ```
 
@@ -52,6 +50,14 @@ itmedia_express_pay:
     version: 1
     return_url: 
     fail_url:
+```
+
+Usage
+-----
+
+For example, to get a list of invoices, in the controller do:
+```php
+    $invoicesList = $this->get('itmedia_express_pay.api_client')->getListInvoices();
 ```
 
 Some useful links:
