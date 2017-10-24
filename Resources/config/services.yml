@@ -1,0 +1,20 @@
+services:
+    itmedia_express_pay.api_client:
+        class: Itmedia\ExpressPayBundle\Service\ApiClient
+        public: true
+        arguments:
+            - "@itmedia_express_pay.signature_provider"
+            - "%itmedia_express_pay.token%"
+            - "%itmedia_express_pay.base_url%"
+            - "%itmedia_express_pay.version%"
+            - "%itmedia_express_pay.return_url%"
+            - "%itmedia_express_pay.fail_url%"
+
+    itmedia_express_pay.signature_provider:
+        class: Itmedia\ExpressPayBundle\Service\SignatureProvider
+        public: false
+        arguments:
+            - "%itmedia_express_pay.api_signature%"
+            - "%itmedia_express_pay.api_secret%"
+            - "%itmedia_express_pay.notification_signature%"
+            - "%itmedia_express_pay.notification_secret%"

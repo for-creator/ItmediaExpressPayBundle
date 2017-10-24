@@ -1,0 +1,29 @@
+{
+  "name": "itmedia/express-pay-bundle",
+  "type": "symfony-bundle",
+  "description": "API-client for https://express-pay.by",
+  "homepage": "https://github.com/for-creator/ItmediaExpressPayBundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Valery Padhainy",
+      "homepage": "http://itmedia.by",
+      "email": "valery@itmedia.by"
+    }
+  ],
+  "require": {
+    "php": "^7.0.0",
+    "guzzlehttp/guzzle": "^6.0",
+    "symfony/http-kernel": "^3.0",
+    "symfony/config": "^3.0",
+    "symfony/dependency-injection": "^3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Itmedia\\ExpressPayBundle\\": ""
+    }
+  }
+}
